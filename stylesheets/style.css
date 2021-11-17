@@ -30,6 +30,9 @@ body.dark {
   --table-border-color: 200 10% 20%;
   --table-even-color: 0 0% 13%;
   --table-odd-color: 0 0% 10%;
+
+  --member-card-bg: 0 0% 7%;
+  --member-card-link-color: 0 0% 100%;
 }
 
 body.light {
@@ -52,6 +55,9 @@ body.light {
   --table-border-color: 0 0% 80%;
   --table-even-color: 0 0% 90%;
   --table-odd-color: 0 0% 94%;
+
+  --member-card-bg: 0 0% 80%;
+  --member-card-link-color: 0 0% 0%;
 }
 
 html {
