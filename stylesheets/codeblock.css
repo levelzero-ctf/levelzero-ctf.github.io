@@ -1,0 +1,13 @@
+.highlighttable, .highlight {
+  display: flex;
+  margin: 2rem 0;
+  padding: 0.25rem 1rem;
+
+  overflow-x: scroll;
+}
+
+.highlighttable code, .highlight code {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  font-family: "Fira Code", monospace;
+}

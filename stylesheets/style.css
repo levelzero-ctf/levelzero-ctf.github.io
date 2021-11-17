@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+body.dark {
+  --bg: 0, 0%, 11%;
+  --fg: 0 0% 100%;
+  --link-color: 135 94% 65%;
+
+  --nav-link-color: 120 100% 50%;
+
+  --footer-border-color: 120, 15%, 67%;
+  --footer-link-color: 240 10% 74%;
+
+  --blockquote-border-color: 36 100% 50%;
+
+  --kbd-color: 150 0% 20%;
+  --kbd-border-color: 229 15% 14%;
+  --kbd-accent-color: 231 8% 28%;
+
+  --table-head-color: 0 0% 0%;
+  --table-border-color: 200 10% 20%;
+  --table-even-color: 0 0% 13%;
+  --table-odd-color: 0 0% 10%;
+}
+
+body.light {
+  --bg: 0 0% 100%;
+  --fg: 0 0% 0%;
+  --link-color: 120 94% 35%;
+
+  --nav-link-color: 120 100% 30%;
+
+  --footer-border-color: 120 15% 17%;
+  --footer-link-color: 240 10% 14%;
+
+  --blockquote-border-color: 264 69% 42%;
+
+  --kbd-color: 0 0% 93%;
+  --kbd-border-color: 0 0% 72%;
+  --kbd-accent-color: 0 0% 98%;
+
+  --table-head-color: 0 0% 80%;
+  --table-border-color: 0 0% 80%;
+  --table-even-color: 0 0% 90%;
+  --table-odd-color: 0 0% 94%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(var(--bg));
+  color: hsl(var(--fg));
+  font-family: "Roboto Mono", monospace;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: hsl(var(--link-color));
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+
+  font-size: 1.1rem;
+  font-family: "Fira Code", monospace;
+}
+
+.navbar a {
+  color: hsl(var(--nav-link-color));
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: hsl(var(--nav-link-color) / 0.8);
+}
+
+.right-links,
+.left-links {
+  word-spacing: 1rem;
+}
+
+main {
+  display: block;
+  padding: 2rem 4rem;
+  line-height: 1.5rem;
+}
+
+main * {
+  margin-top: 1rem;
+}
+
+main ul {
+  margin: 0 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-top: 0.05rem solid hsl(var(--footer-border-color));
+
+  margin-top: auto;
+}
+
+footer * {
+  color: hsl(var(--footer-link-color));
+  text-decoration: none;
+}
+
+footer svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.theme-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: hsl(var(--footer-link-color));
+  transition: all 1s ease;
+}
+
+.social-icon {
+  fill: hsl(var(--footer-link-color));
+}

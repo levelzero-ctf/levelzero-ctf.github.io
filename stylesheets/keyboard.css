@@ -1,0 +1,10 @@
+kbd {
+    background-color: hsl(var(--kbd-color));
+    border-radius: .1rem;
+    box-shadow: 0 .1rem 0 .05rem hsl(var(--kbd-border-color)),0 .1rem 0 hsl(var(--kbd-border-color)),0 -.1rem .2rem hsl(var(--kbd-accent-color)) inset;
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.1rem 0.5rem;
+    vertical-align: text-top;
+    word-break: break-word;
+}
