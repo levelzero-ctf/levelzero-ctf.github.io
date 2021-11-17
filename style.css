@@ -81,6 +81,11 @@ footer * {
   text-decoration: none;
 }
 
+footer svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
 .theme-icon {
   width: 1.5rem;
   height: 1.5rem;
@@ -88,12 +93,6 @@ footer * {
   transition: all 1s ease;
 }
 
-.theme-icon:hover {
-}
-
-
-#twitter {
-  width: 1.5rem;
-  height: 1.5rem;
+.social-icon {
   fill: hsl(var(--footer-link-color));
 }
