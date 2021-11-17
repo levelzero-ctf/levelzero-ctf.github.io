@@ -13,6 +13,100 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/keyboard.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/table.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/codeblock.css">
+    <!--internal css-->
+    <style>
+      ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d2d2d2;
+  border-bottom: 0;
+  
+  &:last-of-type {
+    border: 1px solid #d2d2d2;
+  }
+  
+  &:after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+  
+  li {
+    width: 25%;
+    height: 300px;
+    display: block;
+    float: left;
+    border-left: 1px solid #d2d2d2;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    
+    &:after {
+      display:block;
+      content:'';
+      width: 200%;
+      height: 150px;
+      background: #2e2e2e;
+      position: absolute;
+      bottom: -50px;
+      left: -50%;
+      transform: rotate(-9deg);
+      opacity: 0;
+      bottom: -175px;
+      transition: all 700ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+    }
+    
+    &:nth-child(even){
+      background:white;
+    }
+    
+    h1 {
+      position: absolute;
+      text-align: right;
+      right: 20px;
+      bottom: 20px;
+      color: #b3b3b3;
+      z-index: 1;
+      transition: color .2s ease-in-out;
+    }
+    
+    figure {
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+      
+      img {
+        width: 120%; //to make the example image fit
+        height: auto;
+      }
+    }
+    
+    &:hover,
+    &.active {
+      cursor: pointer;
+      
+      figure {
+        opacity: 1;
+      }
+      
+      h1 {
+        color: white;
+      }
+      
+      &:after {
+        opacity: 1;
+        bottom: -50px;
+      }
+    }
+  }
+}
+    </style>
+    <!--internal css-->
 
   </head>
   <body class="dark">
@@ -26,7 +120,26 @@
       </div>
     </nav>
     <!----TESTING BY SH1N --->
-   <link rel='func' href='/testing/index.haml'>
+   <ul class="blocks">
+    <li>
+      <h1>Title</h1>
+      <figure>
+        <img src="https://0.s3.envato.com/files/154616982/03_Fabien_About_KeyFacts.jpg" />
+      </figure>
+    </li>
+  <li>
+      <h1>Title</h1>
+      <figure>
+        <img src="https://0.s3.envato.com/files/154616982/03_Fabien_About_KeyFacts.jpg" />
+      </figure>
+    </li>
+     <li>
+      <h1>Title</h1>
+      <figure>
+        <img src="https://0.s3.envato.com/files/154616982/03_Fabien_About_KeyFacts.jpg" />
+      </figure>
+    </li>
+  </ul>
      <!----TESTING BY SH1N --->
 
     <main id="content">
