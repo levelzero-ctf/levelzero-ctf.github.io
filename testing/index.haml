@@ -1,0 +1,43 @@
+:ruby
+  @items = [
+    { :t => 'X-rays', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-xrays.png' },
+    { :t => 'Worms', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-worms.png' },
+    { :t => 'Aurora', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-aurora.png' },
+    { :t => 'Angus', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-angus.png' },
+    { :t => 'Huitzi', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-huitzi.png' },
+    { :t => 'Dalí', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-dali.png' },
+    { :t => 'The Bride', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-bride.png' },
+    { :t => 'The Man', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-man.png' },
+    { :t => 'D', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-d.png' },
+    { :t => 'V', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-v.png' },
+    { :t => 'V II', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-v2.png' },
+    { :t => 'V III', :i => 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/i-v3.png' }
+  ]
+
+.container
+  %header
+    %h1 SVG clip-path Hover Effect
+    %p
+      Attempt to re-create <a href="http://www.cjgammon.com/" target="_blank">CJ Gammon’s</a>
+      portfolio grid hover effect using SVG and CSS Transitions.
+    %p.small
+      <b>Note:</b> this is an experiment, it does not seem to work on Firefox 43.0.4
+      neither have touch support.
+      <br/>Tested on Chrome 47.0.2526.106, Opera 34.0 and Safari 8.0.6.
+  %main
+    .items
+      - @items.each_with_index do | item, index |
+        .item
+          %svg{:viewBox => "0 0 300 200", :preserveAspectRatio => "xMidYMid slice"}
+            %defs
+              %clipPath{:id => "clip-#{index}"}
+                %circle{:cx => "0", :cy => "0", :r => "150px", :fill => "#000"}
+            %text{:class => "svg-text", :x => "50%", :y => "50%", :dy => ".3em"}
+              #{item[:t]}
+            %g{:"clip-path" => "url(#clip-#{index})"}
+              %image{"xlink:href" => "#{item[:i]}", :width => "100%", :height => "100%", :preserveAspectRatio => "xMinYMin slice"}
+              %text{:class => "svg-masked-text", :x => "50%", :y => "50%", :dy => ".3em"}
+                #{item[:t]}
+.options
+  %button.dark
+  %button.light
