@@ -58,5 +58,53 @@ function customFooter(element) {
     </footer>`
 }
 
+function memeberCard(element) {
+  let nickname;
+  if (element.attributes.nickname) {
+    nickname = element.attributes.nickname.value
+  }
+  if (element.attributes.username) {
+    let username = element.attributes.username.value;
+    if (nickname) {
+      element.innerHTML = `<div class="card">
+        <div class="cardContent">
+          <div class="imgBx">
+            <img src="https://avatars.githubusercontent.com/${username}">
+          </div>
+
+          <div class="contentBx">
+            <h3>${nickname}</h3>
+          </div>
+          <ul class="sci">
+            <li>
+              <a target="_blank" href="https://www.github.com/${username}"><i class="fab fa-github"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>`
+    }
+    else {
+      element.innerHTML = `<div class="card">
+        <div class="cardContent">
+          <div class="imgBx">
+            <img src="https://avatars.githubusercontent.com/${username}">
+          </div>
+
+          <div class="contentBx">
+            <h3>${username}</h3>
+          </div>
+          <ul class="sci">
+            <li>
+              <a target="_blank" href="https://www.github.com/${username}"><i class="fab fa-github"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>`
+
+    }
+  }
+}
+
 customTag("navbar", navbar);
 customTag("Footer", customFooter);
+customTag("memberCard", memeberCard);
