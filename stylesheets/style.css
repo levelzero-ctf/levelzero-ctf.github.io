@@ -114,7 +114,7 @@ main ul {
   margin: 0 2rem;
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: space-between;
   padding: 1em;
@@ -123,12 +123,12 @@ footer {
   margin-top: auto;
 }
 
-footer * {
+.footer * {
   color: hsl(var(--footer-link-color));
   text-decoration: none;
 }
 
-footer svg {
+.footer svg {
     width: 1.5rem;
     height: 1.5rem;
 }
