@@ -138,14 +138,14 @@ main ul {
     height: 1.5rem;
 }
 
-.theme-icon {
+.theme-icon-link {
   width: 1.5rem;
   height: 1.5rem;
   fill: hsl(var(--footer-link-color));
   transition: all 1s ease;
 }
 
-.theme-icon:hover {
+.theme-icon-link:hover {
   cursor: pointer;
 }
 
