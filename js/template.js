@@ -94,6 +94,16 @@ function memeberCard(element) {
   element.innerHTML = innerHTML;
 }
 
+function socialMetaTags(element) {
+  element.innerHTML = `<meta property="og:title" content="level_zero" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://levelzero-ctf.github.io/" />
+    <meta property="og:image" content="https://levelzero-ctf.github.io/img/levelZero.png" />
+    <meta property="og:description" content="level_zero is a group of cybersecurity enthusiasts." />
+    <meta name="theme-color" content="#1c1c1c">`
+}
+
+customTag("SocialMetaTags", socialMetaTags);
 customTag("navbar", navbar);
 customTag("Footer", customFooter);
 customTag("memberCard", memeberCard);
