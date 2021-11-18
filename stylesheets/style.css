@@ -145,6 +145,10 @@ main ul {
   transition: all 1s ease;
 }
 
+.theme-icon:hover {
+  cursor: pointer;
+}
+
 .social-icon {
   fill: hsl(var(--footer-link-color));
 }
