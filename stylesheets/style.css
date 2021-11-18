@@ -148,3 +148,12 @@ main ul {
 .social-icon {
   fill: hsl(var(--footer-link-color));
 }
+
+.certs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  align-self: center;
+}

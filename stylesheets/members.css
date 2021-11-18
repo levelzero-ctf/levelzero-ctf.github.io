@@ -2,10 +2,6 @@ body {
   display: flex;
 }
 
-.title {
-  align-self: center;
-}
-
 main {
   position: relative;
 }
