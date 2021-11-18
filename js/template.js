@@ -42,10 +42,8 @@ function customFooter(element) {
         </a>
       </div>
       <div class="left-link">
-        <a>
+        <a id="theme-icon" class="theme-icon">
           <svg
-            id="theme-icon"
-            class="theme-icon"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
           >
