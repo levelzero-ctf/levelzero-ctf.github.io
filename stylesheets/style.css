@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 body.dark {
   --bg: 0, 0%, 11%;
@@ -95,8 +99,8 @@ a {
   color: hsl(var(--nav-link-color) / 0.8);
 }
 
-.right-links,
-.left-links {
+.navbar .right-links,
+.navbar .left-links {
   word-spacing: 1rem;
 }
 
@@ -124,7 +128,6 @@ main ul {
   justify-content: space-between;
   padding: 1em;
   border-top: 0.05rem solid hsl(var(--footer-border-color));
-
   margin-top: auto;
 }
 
@@ -134,8 +137,12 @@ main ul {
 }
 
 .footer svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+}
+
+.footer .right-links {
+  word-spacing: 0.1em;
 }
 
 .theme-icon-link {
