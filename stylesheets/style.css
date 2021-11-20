@@ -104,6 +104,10 @@ a {
   word-spacing: 1rem;
 }
 
+.neon-text {
+  text-shadow: 0 0 0.6em currentColor;
+}
+
 .responsive-img {
     max-width: 100%;
     height: auto;

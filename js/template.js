@@ -11,11 +11,11 @@ function customTag(tagName,fn){
 function navbar(element) {
     element.innerHTML = `<nav class="navbar">
       <div class="left-links">
-        <a href="/" id="nav-logo">level_Zero</a>
+        <a href="/" class="nav-logo neon-text">level_Zero</a>
       </div>
       <div class="right-links">
-        <a href="/members.html" id="nav-logo">Members</a>
-        <a href="/writeups.html" id="nav-logo">Writeups</a>
+        <a href="/members.html" class="nav-logo neon-text">Members</a>
+        <a href="/writeups.html" class="nav-logo neon-text">Writeups</a>
       </div>
     </nav>`
 }
