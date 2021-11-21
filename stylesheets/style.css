@@ -15,7 +15,7 @@ html {
 
 body,
 body.dark {
-  --bg: 0, 0%, 11%;
+  --bg: 120 2% 10%;
   --fg: 0 0% 100%;
   --link-color: 135 94% 65%;
 
@@ -40,7 +40,7 @@ body.dark {
 }
 
 body.light {
-  --bg: 0 0% 100%;
+  --bg: 0 0% 95%;
   --fg: 0 0% 0%;
   --link-color: 120 94% 35%;
 
@@ -81,6 +81,12 @@ a {
   color: hsl(var(--link-color));
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -102,10 +108,6 @@ a {
 .navbar .right-links,
 .navbar .left-links {
   word-spacing: 1rem;
-}
-
-.neon-text {
-  text-shadow: 0 0 0.6em currentColor;
 }
 
 .responsive-img {
